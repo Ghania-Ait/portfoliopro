@@ -1,5 +1,6 @@
 import React from "react";
-import Typical from 'react-typical'
+import Typical from 'react-typical';
+import'./Profile.css';
 
 function Profile() {
   return (
@@ -7,6 +8,8 @@ function Profile() {
       <div className="profile-parent">
         <div className="profile-details">
           <div className="colz">
+            <div className="colz-icon">
+
             <a href="https://www.facebook.com/">
               <i className="fa fa-facebook-square"></i>
             </a>
@@ -22,6 +25,7 @@ function Profile() {
             <a href="https://twitter.com/i/flow/login">
               <i className="fa fa-twitter"></i>
             </a>
+            </div>
           </div>
 
           <div className="profile-details-name">
@@ -60,10 +64,15 @@ function Profile() {
                   {" "}
                       Hire Me {" "}
                   </button>
-                  <a href="cv.pdf" download='cv.pdf'>
-                      <button className="btn btn-primary">download Resume</button>
+                  <a href="cv.pdf" download='cv.pdf' >
+                      <button className="btn highlighted-btn">download Resume</button>
                   </a>
               </div>
+          </div>
+          <div className='profile-picture'>
+            <div className='profile-picture-background'>
+
+            </div>
           </div>
         </div>
       </div>
