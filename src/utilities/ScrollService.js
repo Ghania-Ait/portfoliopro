@@ -1,5 +1,6 @@
 import {TOTAL_SCREENS} from './commonUtils';
 import {Subject} from 'rxjs';
+import {object} from 'prop-types'
 
 
 
@@ -45,7 +46,16 @@ checkCurrentScreenUnderViewport=(event)=>{
     if(!event || object.keys(event).length < 1) return;
 
     for(let screen of TOTAL_SCREENS){
-        let screenFromDom=document.getElementById(screenFromDom, 'complete');
+        let screenFromDom=document.getElementById(screen.screen_name);
+
+        if(!screenFromDom) continue;
+         
+
+
+
+        let fullyVisible = this.isElementInView(screenFromDom, 'complete');
+
+
         let partiallyVisible = this.isElementInView(screenFromDom, 'partial');
 
 
@@ -62,6 +72,7 @@ checkCurrentScreenUnderViewport=(event)=>{
             ScrollService.currentScreenBoardCaster.next({
                 screenInView: screen.screen_name,
             });
+
             break;
         }
     }
