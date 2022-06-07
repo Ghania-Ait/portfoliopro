@@ -50,10 +50,10 @@ export default function Header(props) {
 
   return (
     <div
-      className="header-option"
+      className="header-container"
       onClick={() => setShowHeaderdOptions(!showHeaderOptions)}
     >
-      <div classNme="header-parent">
+      <div className="header-parent">
         <div
           className="header-hamburger"
           onClick={() => setShowHeaderdOptions(!showHeaderOptions)}
